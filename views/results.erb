@@ -1,0 +1,5 @@
+<% Choices.each do |value, text| %>
+    <p><%= text %>: <%= @votes[value] || 0 %> </p>
+<% end %>
+
+<a href="/">Powrót</a>

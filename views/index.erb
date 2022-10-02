@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<head>
-    <title>Super strona!</title>
-    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
-    <link href='/stylesheets/styles.css' rel='stylesheet' />
-</head>  
-<body class="container">
-    <img src="https://d-art.ppstatic.pl/kadry/k/r/1f/e1/5c18f55799ee4_o_medium.jpg">
-    <h1><%= @title %></h1>
-
-    <form action="cast" method="post">
-        <ul class="unstyled">
-            <% Choices.each do |value, text| %>
-                <li>
-                    <label class="radio">
-                        <input type="radio" name="vote" value="<%= value %>" />
-                        <%= text %>
-                    </label>
-                </li>
-            <% end %>
-        </ul>
-        <button type="submit" class="btn btn-primary">Poproszę takie jedzonko!</button>
-    </form>
-</body>
+<form action="cast" method="post">
+    <ul class="unstyled">
+        <% Choices.each do |value, text| %>
+            <li>
+                <label class="radio">
+                    <input type="radio" name="vote" value="<%= value %>" />
+                    <%= text %>
+                </label>
+            </li>
+        <% end %>
+    </ul>
+    <button type="submit" class="btn btn-primary">Poproszę takie jedzonko!</button>
+</form>
